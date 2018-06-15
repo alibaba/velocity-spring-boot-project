@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <modules>
+        <module>velocity-spring-boot-autoconfigure</module>
+        <module>velocity-spring-boot-starter</module>
+        <module>velocity-spring-boot-sample</module>
+    </modules>
+
+    <groupId>com.alibaba.boot</groupId>
+    <artifactId>velocity-spring-boot-project</artifactId>
+    <version>0.1.0</version>
+
+    <properties>
+        <revision>1.0.0.RELEASE</revision>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <!-- Servlet -->
+        <servlet-api.version>3.1.0</servlet-api.version>
+        <!-- Velocity -->
+        <velocity.version>1.7</velocity.version>
+        <velocity-tools.version>2.0</velocity-tools.version>
+        <!-- Spring Boot -->
+        <spring-boot.version>2.0.2.RELEASE</spring-boot.version>
+        <!-- Spring Boot Web Support -->
+        <velocity-spring-boot-starter.version>1.0.0.RELEASE</velocity-spring-boot-starter.version>
+        <!-- Spring Velocity Support -->
+        <spring-context-velocity.version>1.4.3.18.RELEASE</spring-context-velocity.version>
+        <spring-webmvc-velocity.version>1.4.3.18.RELEASE</spring-webmvc-velocity.version>
+        <!-- Spring Boot Web Support -->
+        <spring-boot-web-support.version>1.0.0.RELEASE</spring-boot-web-support.version>
+    </properties>
+
+    <scm>
+        <connection>git@github.com:alibaba/velocity-spring-boot-starter.git</connection>
+        <developerConnection>git@github.com:alibaba/velocity-spring-boot-starter.git</developerConnection>
+        <url>https://github.com/alibaba/velocity-spring-boot-starter</url>
+    </scm>
+
+    <developers>
+
+        <developer>
+            <id>mercyblitz</id>
+            <name>Mercy Ma</name>
+            <email>mercyblitz@gmail.com</email>
+            <url>https://github.com/mercyblitz/</url>
+            <roles>
+                <role>Developer</role>
+            </roles>
+        </developer>
+
+    </developers>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- Spring -->
+            <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Spring Velocity Support -->
+            <dependency>
+                <groupId>com.alibaba.spring</groupId>
+                <artifactId>spring-context-velocity</artifactId>
+                <version>${spring-context-velocity.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.spring</groupId>
+                <artifactId>spring-webmvc-velocity</artifactId>
+                <version>${spring-webmvc-velocity.version}</version>
+            </dependency>
+
+            <!-- Spring Boot Web Support -->
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>spring-boot-web-support</artifactId>
+                <version>${spring-boot-web-support.version}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/**</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+</project>
