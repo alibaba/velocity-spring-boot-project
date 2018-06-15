@@ -1,5 +1,0 @@
-# Spring Boot AutoConfiguration
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-org.springframework.boot.autoconfigure.velocity.VelocityAutoConfiguration
-com.alibaba.boot.velocity.autoconfigure.VelocityToolsAutoConfiguration,\
-com.alibaba.boot.velocity.autoconfigure.VelocityLayoutAutoConfiguration
