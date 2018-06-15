@@ -561,7 +561,7 @@ spring.velocity.toolbox-config-location=/toolbox/tools.xml
 ````
 
 
-### Tools Annotation 配置 ( since 1.0.1 )
+### Tools Annotation 配置
 
 从 1.0.1 版本开始，`velocity-spring-boot-starter` 新增Tools Annotation 配置
 方式，以简化配置方式（相对于 XML 方式）
