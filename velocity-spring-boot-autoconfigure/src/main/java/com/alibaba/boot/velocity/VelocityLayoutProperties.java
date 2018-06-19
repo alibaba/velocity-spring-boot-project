@@ -108,7 +108,7 @@ public class VelocityLayoutProperties extends VelocityProperties {
     /**
      * Set {@link #screenContentKey}
      *
-     * @param screenContentKey
+     * @param screenContentKey the key of screen content
      * @version 1.0.0
      * @since 1.0.0
      **/
