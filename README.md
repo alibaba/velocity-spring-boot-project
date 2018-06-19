@@ -23,7 +23,7 @@ A Spring Boot Starter for velocity including Spring's official and Alibaba's imp
         <dependency>
             <groupId>com.alibaba.boot</groupId>
             <artifactId>velocity-spring-boot-starter</artifactId>
-            <version>${project.version}</version>
+            <version>0.1.0</version>
         </dependency>
         ...
     </dependencies>
@@ -43,6 +43,26 @@ If your project failed to resolve the dependency, try to add the following repos
 ```
 
 
+## Features
+
+
+
+
+### Velocity Common support
+
+
+
+
+### Velocity Layout support
+
+
+
+
+### Velocity Tools support
+
+
+
+
 ## Dependencies & Compatibility
 
 | Dependencies   | Compatibility |
@@ -50,6 +70,7 @@ If your project failed to resolve the dependency, try to add the following repos
 | Java           | 1.7 +         |
 | Servlet        | 3.0 +         |
 | Spring Boot    | 1.4 +         |
+| [Alibaba Spring Velocity Context Support](https://github.com/alibaba/spring-velocity-support/)| 1.4.1.8 + |
 | [Alibaba Spring Boot Web Support](https://github.com/alibaba/spring-boot-web-support) | 1.0.0 + |
 | [Alibaba Spring WebMVC Support](https://github.com/alibaba/spring-webmvc-support) | 1.0.0 + |
 | [Alibaba Spring Context Support](https://github.com/alibaba/spring-context-support) | 1.0.0 + |

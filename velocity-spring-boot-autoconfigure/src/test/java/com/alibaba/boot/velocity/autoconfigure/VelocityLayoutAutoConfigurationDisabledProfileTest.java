@@ -1,6 +1,5 @@
 package com.alibaba.boot.velocity.autoconfigure;
 
-import com.alibaba.boot.velocity.TestSpringBootConfiguration;
 import com.alibaba.boot.velocity.VelocityLayoutProperties;
 import com.alibaba.boot.velocity.web.servlet.view.EmbeddedVelocityLayoutViewResolver;
 import org.junit.Assert;

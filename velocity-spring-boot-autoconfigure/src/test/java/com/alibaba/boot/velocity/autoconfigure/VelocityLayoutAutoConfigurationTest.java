@@ -1,12 +1,16 @@
 package com.alibaba.boot.velocity.autoconfigure;
 
-import com.alibaba.boot.velocity.AbstractSpringBootTest;
 import com.alibaba.boot.velocity.VelocityLayoutProperties;
 import com.alibaba.boot.velocity.web.servlet.view.EmbeddedVelocityLayoutViewResolver;
+import com.alibaba.spring.util.FieldUtils;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * {@link VelocityLayoutAutoConfiguration} Test
@@ -17,7 +21,11 @@ import org.springframework.test.context.ActiveProfiles;
  * @since 1.0.0 2016-07-18
  */
 @ActiveProfiles("enabled")
-public class VelocityLayoutAutoConfigurationTest extends AbstractSpringBootTest {
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = {VelocityLayoutAutoConfigurationTest.class},
+        webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@EnableAutoConfiguration
+public class VelocityLayoutAutoConfigurationTest {
 
     @Autowired
     private VelocityLayoutAutoConfiguration velocityLayoutAutoConfiguration;
@@ -39,13 +47,14 @@ public class VelocityLayoutAutoConfigurationTest extends AbstractSpringBootTest 
     @Test
     public void testVelocityLayoutViewResolver() {
 
-        String layoutUrl = getValue(embeddedVelocityLayoutViewResolver, "layoutUrl");
+        String layoutUrl = FieldUtils.getFieldValue(embeddedVelocityLayoutViewResolver, "layoutUrl");
         Assert.assertEquals("/layout/default.vm", layoutUrl);
 
-        String layoutKey = getValue(embeddedVelocityLayoutViewResolver, "layoutKey");
+        String layoutKey = FieldUtils.getFieldValue(embeddedVelocityLayoutViewResolver, "layoutKey");
         Assert.assertEquals("layout_key", layoutKey);
 
-        String screenContentKey = getValue(embeddedVelocityLayoutViewResolver, "screenContentKey");
+        String screenContentKey = FieldUtils.getFieldValue(embeddedVelocityLayoutViewResolver, "screenContentKey");
         Assert.assertEquals("body_content", screenContentKey);
     }
+
 }
