@@ -41,9 +41,9 @@
     </properties>
 
     <scm>
-        <connection>git@github.com:alibaba/velocity-spring-boot-starter.git</connection>
-        <developerConnection>git@github.com:alibaba/velocity-spring-boot-starter.git</developerConnection>
-        <url>https://github.com/alibaba/velocity-spring-boot-starter</url>
+        <connection>git@github.com:alibaba/velocity-spring-boot-project.git</connection>
+        <developerConnection>git@github.com:alibaba/velocity-spring-boot-project.git</developerConnection>
+        <url>https://github.com/alibaba/velocity-spring-boot-project</url>
     </scm>
 
     <developers>
