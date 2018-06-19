@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * {@link AnnotatedVelocityToolsScanner} Test
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @since 1.0.4-SNAPHOT
  */
 @RunWith(SpringRunner.class)

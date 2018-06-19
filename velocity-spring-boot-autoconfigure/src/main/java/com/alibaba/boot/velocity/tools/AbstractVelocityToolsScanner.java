@@ -14,7 +14,7 @@ import static java.util.Collections.unmodifiableMap;
 /**
  * Abstract {@link VelocityToolsScanner} implementation
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @see VelocityToolsScanner
  * @since 1.0.3
  */

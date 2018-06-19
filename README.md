@@ -5,7 +5,42 @@ A Spring Boot Starter for velocity including Spring's official and Alibaba's imp
 
 ## [Release Notes](release-notes.md)
 
+## [中文文档](README_CN.md)
 
+
+## Released version
+
+
+```xml
+    <dependencies>
+        ...
+        <!-- Spring Boot Starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>velocity-spring-boot-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        ...
+    </dependencies>
+```
+
+If your project failed to resolve the dependency, try to add the following repository:
+```xml
+    <repositories>
+        <repository>
+            <id>sonatype-nexus</id>
+            <url>https://oss.sonatype.org/content/repositories/releases</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+```
 
 
 ## Dependencies & Compatibility
@@ -32,6 +67,6 @@ A Spring Boot Starter for velocity including Spring's official and Alibaba's imp
         * [Alibaba Spring Velocity Context Support](https://github.com/alibaba/spring-velocity-support/tree/master/spring-context-velocity)
 
 
-## [中文文档](README_CN.md)
+
 
 

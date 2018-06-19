@@ -22,7 +22,7 @@ import static org.springframework.core.annotation.AnnotationUtils.findAnnotation
 /**
  * Annotated {@link DefaultKey} {@link VelocityToolsScanner} implementation.
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @see VelocityToolsScanner
  * @since 1.0.3
  */

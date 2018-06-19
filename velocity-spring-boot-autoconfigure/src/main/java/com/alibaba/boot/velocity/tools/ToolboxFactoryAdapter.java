@@ -10,8 +10,8 @@ import static java.util.Collections.unmodifiableMap;
 /**
  * {@link ToolboxFactory} Adapter
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
- * @since
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
+ * @since 1.0.3
  */
 public class ToolboxFactoryAdapter extends ToolboxFactory {
 

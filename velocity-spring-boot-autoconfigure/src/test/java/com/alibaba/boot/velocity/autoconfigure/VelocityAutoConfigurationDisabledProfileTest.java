@@ -9,7 +9,7 @@ import org.springframework.test.context.ActiveProfiles;
 /**
  * {@link VelocityLayoutAutoConfiguration} Disabled Test
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @version 1.0.0
  * @see VelocityLayoutAutoConfiguration
  * @since 1.0.0 2016-07-18

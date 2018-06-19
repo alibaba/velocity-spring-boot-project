@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.velocity.VelocityProperties;
 /**
  * {@link VelocityConstants}
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @see VelocityConstants
  * @since 1.0.1 2016-11-03
  */

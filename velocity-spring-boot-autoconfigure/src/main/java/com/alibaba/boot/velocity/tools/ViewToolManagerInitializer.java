@@ -8,15 +8,14 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 
 import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
 
 import static org.springframework.web.context.support.WebApplicationContextUtils.getRequiredWebApplicationContext;
 
 /**
  * {@link ViewToolManager} Initializer
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
- * @since
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
+ * @since 1.0.3
  */
 @Component
 public class ViewToolManagerInitializer implements ServletContextInitializer, Ordered {
@@ -26,7 +25,7 @@ public class ViewToolManagerInitializer implements ServletContextInitializer, Or
     private static final String CONTEXT_ATTRIBUTE_NAME = ViewToolManager.class.getName();
 
     @Override
-    public void onStartup(ServletContext servletContext) throws ServletException {
+    public void onStartup(ServletContext servletContext) {
         WebApplicationContext webApplicationContext = getRequiredWebApplicationContext(servletContext);
         VelocityEngine velocityEngine = webApplicationContext.getBean(VelocityEngine.class);
         ViewToolManager viewToolManager = new ViewToolManager(servletContext, false, false);
@@ -38,7 +37,7 @@ public class ViewToolManagerInitializer implements ServletContextInitializer, Or
      * Get {@link ViewToolManager} instance from {@link ServletContext}
      *
      * @param servletContext {@link ServletContext}
-     * @return {@lin ViewToolManager}
+     * @return {@link ViewToolManager}
      */
     public static ViewToolManager getViewToolManager(ServletContext servletContext) {
         return (ViewToolManager) servletContext.getAttribute(CONTEXT_ATTRIBUTE_NAME);

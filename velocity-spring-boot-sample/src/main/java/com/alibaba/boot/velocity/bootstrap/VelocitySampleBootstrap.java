@@ -7,7 +7,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 /**
  * {@link VelocitySampleBootstrap}
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @version 1.0.0
  * @see VelocitySampleBootstrap
  * @since 1.0.0 2016-07-18

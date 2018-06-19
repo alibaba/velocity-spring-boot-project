@@ -13,7 +13,7 @@ import static com.alibaba.boot.velocity.VelocityConstants.VELOCITY_TOOLBOX_CONFI
 /**
  * Standard {@link VelocityToolsScanner} implementation
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @see AbstractVelocityToolsScanner
  * @since 1.0.3
  */

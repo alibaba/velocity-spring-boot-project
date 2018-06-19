@@ -12,7 +12,7 @@ import static com.alibaba.boot.velocity.VelocityConstants.DEFAULT_VELOCITY_LAYOU
 /**
  * {@link VelocityLayoutProperties}
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @version 1.0.0
  * @see VelocityLayoutProperties
  * @since 1.0.0 2016-07-18
@@ -31,7 +31,7 @@ public class VelocityLayoutProperties extends VelocityProperties {
     /**
      * Get {@link #layoutEnabled}
      *
-     * @return layoutEnabled
+     * @return layoutEnabled enable layout
      * @version 1.0.0
      * @since 1.0.0
      **/
@@ -42,7 +42,7 @@ public class VelocityLayoutProperties extends VelocityProperties {
     /**
      * Set {@link #layoutEnabled}
      *
-     * @param layoutEnabled
+     * @param layoutEnabled enable layout
      * @version 1.0.0
      * @since 1.0.0
      **/
@@ -64,7 +64,7 @@ public class VelocityLayoutProperties extends VelocityProperties {
     /**
      * Set {@link #layoutUrl}
      *
-     * @param layoutUrl
+     * @param layoutUrl the url of layout
      * @version 1.0.0
      * @since 1.0.0
      **/
@@ -86,7 +86,7 @@ public class VelocityLayoutProperties extends VelocityProperties {
     /**
      * Set {@link #layoutKey}
      *
-     * @param layoutKey
+     * @param layoutKey the key of layout
      * @version 1.0.0
      * @since 1.0.0
      **/

@@ -22,7 +22,6 @@
     <version>0.1.0</version>
 
     <properties>
-        <revision>1.0.0.RELEASE</revision>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <!-- Servlet -->
@@ -145,16 +144,5 @@
             </build>
         </profile>
     </profiles>
-
-    <build>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/**</include>
-                </includes>
-            </resource>
-        </resources>
-    </build>
 
 </project>

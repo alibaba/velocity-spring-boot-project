@@ -10,8 +10,8 @@ import java.util.Map;
 /**
  * {@link EmbeddedVelocityLayoutToolboxView}
  *
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @version 1.0.0
- * @assembler <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
  * @see VelocityLayoutView
  * @see EmbeddedVelocityToolboxView
  * @since 1.0.0 2016-07-20

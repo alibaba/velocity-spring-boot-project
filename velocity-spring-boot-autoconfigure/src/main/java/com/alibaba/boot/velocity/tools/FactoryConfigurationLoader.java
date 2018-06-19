@@ -13,7 +13,7 @@ import static org.springframework.util.ResourceUtils.CLASSPATH_URL_PREFIX;
 /**
  * {@link FactoryConfiguration} Loader
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @since 1.0.3
  */
 class FactoryConfigurationLoader {
@@ -36,7 +36,9 @@ class FactoryConfigurationLoader {
         FactoryConfiguration allFactoryConfiguration = new FactoryConfiguration();
         for (String toolboxConfigLocation : toolboxConfigLocations) {
             FactoryConfiguration factoryConfiguration = load(toolboxConfigLocation);
-            allFactoryConfiguration.addConfiguration(factoryConfiguration);
+            if (factoryConfiguration != null) {
+                allFactoryConfiguration.addConfiguration(factoryConfiguration);
+            }
         }
         return allFactoryConfiguration;
     }

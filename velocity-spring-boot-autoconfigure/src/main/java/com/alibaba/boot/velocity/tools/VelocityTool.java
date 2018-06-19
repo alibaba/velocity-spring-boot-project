@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * Velocity {@link ToolInfo Tool}
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @see ToolInfo
  * @since 1.0.3
  */

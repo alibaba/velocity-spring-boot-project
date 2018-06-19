@@ -5,7 +5,7 @@ import org.springframework.core.env.PropertyResolver;
 /**
  * Relaxed {@link PropertyResolver} is compatible between Spring Boot 1.x and 2.0
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @since 1.0.3
  */
 public class CompatibleRelaxedPropertyResolver implements PropertyResolver {

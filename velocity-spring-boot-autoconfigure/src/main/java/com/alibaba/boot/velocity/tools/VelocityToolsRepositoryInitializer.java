@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * {@link VelocityToolsRepository} Initializer
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @see VelocityToolsRepository
  * @since 1.0.3
  */
