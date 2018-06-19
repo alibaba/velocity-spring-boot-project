@@ -443,7 +443,7 @@ spring.velocity.layout-enabled = false
 ## Velocity 渲染支持
 
 
-### 独占 VelocityViewResolver 配置 ( since 1.0.1 )
+### 独占 VelocityViewResolver 配置
 
 Spring Boot 自动装配 Spring WebMVC 所提供的
 `org.springframework.web.servlet.view.ContentNegotiatingViewResolver`组
