@@ -8,6 +8,7 @@ import org.springframework.web.servlet.view.velocity.VelocityLayoutView;
 import org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver;
 
 import static com.alibaba.boot.velocity.VelocityConstants.DEFAULT_VELOCITY_LAYOUT_ENABLED_VALUE;
+import static com.alibaba.boot.velocity.util.PathUtils.*;
 
 /**
  * {@link VelocityLayoutProperties}
@@ -122,5 +123,23 @@ public class VelocityLayoutProperties extends VelocityProperties {
                 "ViewResolver is not an instance of VelocityLayoutViewResolver : "
                         + viewResolver);
         BeanUtils.copyProperties(this, viewResolver);
+    }
+
+    @Override
+    public void setResourceLoaderPath(String resourceLoaderPath) {
+        String normalizedPath = normalize(resourceLoaderPath);
+        super.setResourceLoaderPath(normalizedPath);
+    }
+
+    @Override
+    public void setPrefix(String prefix) {
+
+        String actualPrefix = removeHeadSlash(prefix);
+
+        if (!actualPrefix.endsWith(SLASH)) { // If does not end with SLASH
+            actualPrefix = actualPrefix + SLASH;
+        }
+        super.setPrefix(actualPrefix);
+
     }
 }

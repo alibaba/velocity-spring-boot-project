@@ -17,23 +17,19 @@ import javax.servlet.http.HttpServletRequest;
  * @since 1.0.0 2016-07-18
  */
 @Controller
-@VelocityLayout("/layout/default.vm")
+@VelocityLayout("/layout/default.vm") // Default layout page URL in current @Controller
 public class IndexController extends BaseController {
 
     @RequestMapping(value = {"/", "/index"})
     public String index(Model model) {
-        // 布局文件资源URL来源于
-        // spring.velocity.layoutUrl = /layout/default-layout.vm
         return "index";
     }
 
     @RequestMapping(value = "/tools", method = {RequestMethod.GET, RequestMethod.POST})
-    @VelocityLayout("/layout/layout.vm")
+    @VelocityLayout("/layout/layout.vm") // Overrides default layout @VelocityLayout("/layout/default.vm")
     public String tools(Model model, HttpServletRequest request) {
-
         model.addAttribute("request", request);
-
-        return "forward:/index";
+        return "tools";
     }
 
 

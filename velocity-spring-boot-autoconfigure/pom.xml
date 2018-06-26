@@ -5,14 +5,14 @@
     <parent>
         <groupId>com.alibaba.boot</groupId>
         <artifactId>velocity-spring-boot-project</artifactId>
-        <version>0.1.0</version>
+        <version>1.0.4.RELEASE</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.alibaba.boot</groupId>
     <artifactId>velocity-spring-boot-autoconfigure</artifactId>
-    <version>0.1.0</version>
+    <version>1.0.4.RELEASE</version>
 
     <dependencies>
 

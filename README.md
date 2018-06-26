@@ -23,7 +23,7 @@ A Spring Boot Starter for velocity including Spring's official and Alibaba's imp
         <dependency>
             <groupId>com.alibaba.boot</groupId>
             <artifactId>velocity-spring-boot-starter</artifactId>
-            <version>0.1.0</version>
+            <version>1.0.4.RELEASE</version>
         </dependency>
         ...
     </dependencies>

@@ -19,7 +19,7 @@
 
     <groupId>com.alibaba.boot</groupId>
     <artifactId>velocity-spring-boot-project</artifactId>
-    <version>0.1.0</version>
+    <version>1.0.4.RELEASE</version>
 
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
@@ -30,7 +30,7 @@
         <velocity.version>1.7</velocity.version>
         <velocity-tools.version>2.0</velocity-tools.version>
         <!-- Spring Boot -->
-        <spring-boot.version>2.0.2.RELEASE</spring-boot.version>
+        <spring-boot.version>2.0.3.RELEASE</spring-boot.version>
         <!-- Spring Boot Web Support -->
         <velocity-spring-boot-starter.version>1.0.0.RELEASE</velocity-spring-boot-starter.version>
         <!-- Spring Velocity Support -->

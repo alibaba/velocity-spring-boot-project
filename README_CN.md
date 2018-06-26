@@ -46,7 +46,7 @@ Spring Boot Starter 支持模板引擎 velocity 以及 velocity tools，该Start
     <dependency>
         <groupId>com.alibaba.boot</groupId>
         <artifactId>velocity-spring-boot-starter</artifactId>
-        <version>1.0.0.RELEASE</version>
+        <version>1.0.4.RELEASE</version>
     </dependency>
 
     ......
