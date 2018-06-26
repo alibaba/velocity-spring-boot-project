@@ -2,41 +2,20 @@
 
 Spring Boot Starter 支持模板引擎 velocity 以及 velocity tools，该Starter是官方Starter的补充。
 
-## [Release Notes](release-notes.md)
+
+
+
+## [发布日志](release-notes.md)
 
 
 
 
-## 依赖 和 兼容性
-
-| 依赖   | 兼容性 |
-| -------------- | ------------- |
-| Java           | 1.7 +         |
-| Servlet        | 3.0 +         |
-| Spring Boot    | 1.4 +         |
-| [Alibaba Spring Boot Web Support](https://github.com/alibaba/spring-boot-web-support) | 1.0.0 + |
-| [Alibaba Spring WebMVC Support](https://github.com/alibaba/spring-webmvc-support) | 1.0.0 + |
-| [Alibaba Spring Context Support](https://github.com/alibaba/spring-context-support) | 1.0.0 + |
-| [Alibaba Spring Velocity Web MVC Support](https://github.com/alibaba/spring-velocity-support/tree/master/spring-webmvc-velocity) | 1.4.3.18 + |
+## [English Document](README.md)
 
 
 
 
-## 下游工程
-
-* [Alibaba Spring Boot Web Support](https://github.com/alibaba/spring-boot-web-support)
-    * [Alibaba Spring WebMVC Support](https://github.com/alibaba/spring-webmvc-support)
-        * [Alibaba Spring Context Support](https://github.com/alibaba/spring-context-support)
-* [Alibaba Spring Velocity Support](https://github.com/alibaba/spring-velocity-support/)
-    * [Alibaba Spring Velocity Web MVC Support](https://github.com/alibaba/spring-velocity-support/tree/master/spring-webmvc-velocity)
-        * [Alibaba Spring Velocity Context Support](https://github.com/alibaba/spring-velocity-support/tree/master/spring-context-velocity)
-
-
-## 如何引入
-
-
-### Maven 依赖
-
+## 发布版本
 
 ````xml
 <dependencies>
@@ -55,17 +34,36 @@ Spring Boot Starter 支持模板引擎 velocity 以及 velocity tools，该Start
 ````
 
 
-当以上依赖增加到应用中，Velocity 功能会自动装配。
-
-同时，间接引入 velocity 1.7 以及 velocity-tools 2.0
 
 
+## 依赖和兼容性
 
-## Velocity 页面设置
+| 依赖   | 兼容性 |
+| -------------- | ------------- |
+| Java           | 1.7 +         |
+| Velocity       | 1.7 +         |
+| Velocity Tools | 2.0 +         |
+| Servlet        | 3.0 +         |
+| Spring Boot    | 1.4 +         |
+| [Alibaba Spring Boot Web Support](https://github.com/alibaba/spring-boot-web-support) | 1.0.0 + |
+| [Alibaba Spring WebMVC Support](https://github.com/alibaba/spring-webmvc-support) | 1.0.0 + |
+| [Alibaba Spring Context Support](https://github.com/alibaba/spring-context-support) | 1.0.0 + |
+| [Alibaba Spring Velocity Web MVC Support](https://github.com/alibaba/spring-velocity-support/tree/master/spring-webmvc-velocity) | 1.4.3.18 + |
 
 
-### Velocity 页面资源根路径
 
+
+## 功能特性
+
+
+
+
+### 模板页面设置
+
+
+
+
+#### 模板页面资源根路径
 
 ````properties
 # Velocity 页面资源路径（可选），默认值："classpath:/templates/"
@@ -76,8 +74,9 @@ spring.velocity.resource-loader-path = classpath:/templates/velocity
 ````
 
 
-### Velocity 页面文件前缀
 
+
+#### 模板页面文件前缀
 
 ````properties
 # Velocity  页面文件前缀（可选），默认值：""
@@ -85,8 +84,9 @@ spring.velocity.prefix = /default/
 ````
 
 
-### Velocity 页面文件后缀
 
+
+#### 模板页面文件后缀
 
 ````properties
 # Velocity  页面文件后缀（可选），默认值：".vm"
@@ -94,10 +94,11 @@ spring.velocity.suffix = .vm
 ````
 
 
+
+
 #### 举例说明
 
-
-配置项
+* 配置项
 
 ````properties
 spring.velocity.resource-loader-path = classpath:/templates/velocity
@@ -105,7 +106,7 @@ spring.velocity.prefix = /default/
 spring.velocity.suffix = .vm
 ````
 
-Java代码
+* Java 代码
 
 ````java
 @RequestMapping(value = {"/", ""})
@@ -115,15 +116,12 @@ public String index(Model model) {
 ````
 
 根据以上配置和Java代码为例，
-当前请求（URL："/"）访问时，Spring MVC 会通过路径classpath:/templates/velocity/default/index.vm
-来寻找Velocity资源页面。
+当前请求（URL："/"）访问时，Spring MVC 会通过路径 `classpath:/templates/velocity/default/index.vm` 来寻找Velocity资源页面。
 
 
 
-## Velocity 其他设置
 
-
-### Spring Boot 配置项模式
+### Spring Boot 外部化配置模式
 
 
 配置项模式
@@ -158,16 +156,17 @@ spring.velocity.properties.velocimacro.library.autoreload = false
 
 
 
-## 多资源加载器（`ResourceLoader`）
 
+### 多资源加载器（`ResourceLoader`）
 
 Velocity 支持多资源加载器（`ResourceLoader`）配置，每种资源加载器均为
 `org.apache.velocity.runtime.resource.loader.ResourceLoader` 的实例，其
 意图在于提供多种Velocity模板资源方式，以突破传统渲染引擎资源加载单一的局限。
 
 
-### 资源加载器（`ResourceLoader`）类层次关系
 
+
+#### 资源加载器（`ResourceLoader`）类层次关系
 
 资源加载器（`ResourceLoader`）类层次关系如下：
 
@@ -182,14 +181,16 @@ Velocity 支持多资源加载器（`ResourceLoader`）配置，每种资源加�
     * `org.springframework.ui.velocity.SpringResourceLoader` ( Spring Framework 提供 ）
 
 
-### Spring Boot 多资源加载器（`ResourceLoader`）配置
+
+
+#### Spring Boot 多资源加载器（`ResourceLoader`）配置
 
 
 当读者了解资源加载器（`ResourceLoader`）类层次关系后，还需回顾传统的Velocity
 Properties 配置方式。
 
 
-* 传统的Velocity Properties 配置方式
+* 传统的 Velocity Properties 配置方式
 
 ````properties
 # ResourceLoader 名称设置，多值以","分割
@@ -211,7 +212,7 @@ classpath.resource.loader.class = org.apache.velocity.runtime.resource.loader.Cl
 更多传统配置细节，请参考[官方资源管理章节](http://velocity.apache.org/engine/1.7/developer-guide.html#resource-management)
 
 
-* 等效的Spring Boot Properties 配置方式
+* 等效的 Spring Boot Properties 配置方式
 
 ````properties
 # ResourceLoader 名称设置，多值以","分割
@@ -257,7 +258,7 @@ spring.velocity.properties.spring.resource.loader.cache = true
 ````
 
 
-## Velocity Layout 支持
+### Velocity Layout 支持
 
 
 官方默认自动装配 org.springframework.web.servlet.view.velocity.VelocityViewResolver  , 
@@ -265,7 +266,7 @@ spring.velocity.properties.spring.resource.loader.cache = true
 代替VelocityViewResolver , 对Layout 支持。
 
 
-### Layout 配置项
+#### Layout 配置项
 
 为了与保持官方继承配置项前缀 "spring.velocity."，因此其他Velocity配置项与官方保持一致，
 
@@ -278,7 +279,7 @@ spring.velocity.resource-loader-path = classpath:/templates/velocity
 ````
 
 
-#### 布局页面资源位置URL
+##### 布局页面资源位置URL
 
 layoutUrl : layout VM页面的URL路径。
 
@@ -292,7 +293,7 @@ spring.velocity.layout-url = /layout/default.vm
 ````
 
 
-#### 布局页面资源位置的渲染上下文名称
+##### 布局页面资源位置的渲染上下文名称
 
 layoutKey : 布局页面资源位置渲染上下文名称
 
@@ -315,7 +316,7 @@ public String layout(Model model) {
 ````
 
 
-#### MVC View 渲染HTML内容的渲染上下文名称
+##### MVC View 渲染HTML内容的渲染上下文名称
 
 screenContentKey : MVC View 渲染HTML内容的渲染上下文名称
 
@@ -343,7 +344,7 @@ Layout Velocity 代码
 ````
 
 
-### @VelocityLayout 支持
+#### `@VelocityLayout` 支持
 
 velocity-spring-boot-starter 1.0.0.RELEASE 版本开始提供Annotation
 `com.alibaba.boot.velocity.annotation.VelocityLayout`，该Annotation
@@ -351,7 +352,7 @@ velocity-spring-boot-starter 1.0.0.RELEASE 版本开始提供Annotation
 （即配置项`spring.velocity.layout-url`)。
 
 
-#### @VelocityLayout 定义
+##### `@VelocityLayout` 定义
 
 ````java
 @Target({ElementType.TYPE, ElementType.METHOD})
@@ -371,7 +372,7 @@ public @interface VelocityLayout {
 @VelocityLayout 可以定义在 @Controller 类或其处理方法上。
 
 
-#### @VelocityLayout 处理逻辑
+#### `@VelocityLayout` 处理逻辑
 
 * 当 @Controller 处理方法中，将配置项`spring.velocity.layout-key`（默认值:"layout"）
 的值作为上下文名称，如果该上下文名称在渲染上下文中或者模型（例如：org.springframework.ui.Model)
@@ -386,7 +387,7 @@ public @interface VelocityLayout {
 * 否则，配置项`spring.velocity.layout-url`中定义的值作为Velocity Layout URL。
 
 
-#### @VelocityLayout 实例代码分析
+#### `@VelocityLayout` 实例代码分析
 
 ````java
 @Controller
@@ -419,7 +420,7 @@ public class VelocityLayoutController extends BaseController {
 }
 ````
 
-根据 @VelocityLayout 处理逻辑，
+根据 `@VelocityLayout` 处理逻辑，
 
 * "/layout1" 的Velocity Layou URL 使用了 Model 中的 "/layout/layout.vm"
 (Java Code : `model.addAttribute(velocityLayoutProperties.getLayoutKey(), "/layout/layout.vm")`)
@@ -440,10 +441,10 @@ spring.velocity.layout-enabled = false
 
 
 
-## Velocity 渲染支持
+### Velocity 渲染支持
 
 
-### 独占 VelocityViewResolver 配置
+#### 独占 VelocityViewResolver 配置
 
 Spring Boot 自动装配 Spring WebMVC 所提供的
 `org.springframework.web.servlet.view.ContentNegotiatingViewResolver`组
@@ -489,14 +490,14 @@ web-support.exclusive-view-resolver = velocityViewResolver
 派生类实例。
 
 
-## Velocity Tools 支持
+### Velocity Tools 支持
 
 
 Velocity Spring Boot Starter 支持 Tools 2.0 功能，通用功能文档，请参考：
 http://velocity.apache.org/tools/2.0/generic.html
 
 
-### Tools 配置项
+#### Tools 配置项
 
 
 Velocity Tools 配置是以XML文件为载体，XML文件的搜索路径：
@@ -561,13 +562,13 @@ spring.velocity.toolbox-config-location=/toolbox/tools.xml
 ````
 
 
-### Tools Annotation 配置
+#### Tools Annotation 配置
 
 从 1.0.1 版本开始，`velocity-spring-boot-starter` 新增Tools Annotation 配置
 方式，以简化配置方式（相对于 XML 方式）
 
 
-#### 实现 Tool
+##### 实现 Tool
 
 
 `velocity-spring-boot-starter` 使用了 Velocity Tools 2.0 ，该版本使用
@@ -633,70 +634,11 @@ spring.velocity.tools-base-packages = org.apache.velocity.tools.generic,com.alib
     Hello,World
     ````
 
-## Velocity 共享渲染上下文
+## 下游工程
 
-Velocity 共享渲染上下文是用于多个页面共享，比如在布局中的相对固定的链接。
-
-其中，@ModelAttribute#value为上下文名称，方法返回值为上下文内容。
-
-例如：
-
-Spring MVC Controller 代码
-
-````java
-@Controller
-public class TestController {
-
-    @RequestMapping(value = {"/", ""})
-    public String index(Model model) {
-        // 布局文件资源URL来源于
-        // spring.velocity.layoutUrl = /layout/default-layout.vm
-        return "index";
-    }
-
-    @RequestMapping(value = {"/layout"})
-    public String layout(Model model) {
-        // 布局页面资源位置的渲染上下文名称
-        // spring.velocity.layoutKey = layout_key
-        model.addAttribute("layout_key", "/layout/layout.vm");
-        return "index";
-    }
-
-    @ModelAttribute("pageTitle")
-    public String pageTitle() {
-        return "页面标题";
-    }
-
-    @ModelAttribute("linkLabel")
-    public String linkLabel() {
-        return "阿里巴巴";
-    }
-
-    @ModelAttribute("link")
-    public String link() {
-        return "https://www.alibaba-inc.com";
-    }
-
-}
-````
-
-关联上下文名称：pageTitle、linkLabel以及link。
-
-Velocity 模板代码：
-
-````html
-<html>
-<head>
-  <title>$!pageTitle</title>
-</head>
-<body>
-  <!-- MVC View 渲染HTML内容的渲染上下文名称 -->
-  <!-- spring.velocity.screenContentKey = body_content -->
-  $body_content
-
-   <br />
-
-   <a href="$!link" target="_blank">$!linkLabel</a>
-</body>
-</html>
-````
+* [Alibaba Spring Boot Web Support](https://github.com/alibaba/spring-boot-web-support)
+    * [Alibaba Spring WebMVC Support](https://github.com/alibaba/spring-webmvc-support)
+        * [Alibaba Spring Context Support](https://github.com/alibaba/spring-context-support)
+* [Alibaba Spring Velocity Support](https://github.com/alibaba/spring-velocity-support/)
+    * [Alibaba Spring Velocity Web MVC Support](https://github.com/alibaba/spring-velocity-support/tree/master/spring-webmvc-velocity)
+        * [Alibaba Spring Velocity Context Support](https://github.com/alibaba/spring-velocity-support/tree/master/spring-context-velocity)
