@@ -5,7 +5,7 @@ import org.apache.commons.lang.StringUtils;
 /**
  * Path Utilities class
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy<a/>
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @since 1.0.4
  */
 public abstract class PathUtils {
